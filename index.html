@@ -1,19 +1,290 @@
-<style>
-  h1 {
-    background-color: black;
-    color: green;
-    font-family: monospace;
-  }
-  
-</style>
+<!-- A simple html web page, you would like to use a (markup) validation server to check errors like w3c -->
+<!-- index.html is the first loading page for web -->
 
+<!DOCTYPE html>	<!-- document type declairation -->
+<!-- html opening tag -->
+<html lang="en">
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>This is my GitHub repository</title>
-  </head>
-   <body>
-     <h1>I'm VKwang, student from <a href="https://www.fju.edu.tw/index.jsp">FJCU</a>.<h1>
-   </body>
+	<!-- metadata about the page, doesn't show on page -->
+	<head>
+		<meta charset="UTF-8">	<!-- character encoding -->
+		<meta name="author" content="Victor King">
+		<meta name="description" content="This page contains all the things I am learning from: Learning HTML - Full Tutorial for Beginners">
+		<title>My Fisrt Web Page</title>
+		<!-- following link tag(links to resources) difference with anchor tag(which links to other pages)-->
+		<link rel="icon" href="images/html5.png" type="image/x-icon"> <!-- rel(relation/relate) href(hypertext reference) -->
+		<link rel="stylesheet" href="styles/main.css" type="text/css"> <!-- set page to dark_mode with whitesmoke color -->
+	</head>
+	
+	<!-- content/ element in here will be showen on page -->
+	<body>
+	<!-- block-level element: h1, p, hr, br... -->
+	<!-- inline-leve element: em, strong, abbr... -->
+	<!-- html entity:&lt, &gt, &copy... -->
+		<header> <!--html semantic-->
+			<h1>Hello World!</h1> <!-- only one biggest header element: the bigger the number the greater the size -->
+			
+			<nav aria-label="primary-navigation"> <!-- navigation element -->
+				<!-- <h2 id="primary-navigation">Abstruct</h2> then change 'aria-label' to 'aria-labelledby'-->
+				<ul>
+					<li>
+						<a href="#html">Learning HTML</a>
+					</li>
+					<li>
+						<a href="#summer-vacation">My Summer Vacation</a>
+					</li>
+					<li>
+						<a href="#contact">Contact Me</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<hr> <!-- horizontal rule: no closing tag -->
+		
+		<main> <!-- only on main element --> <!--html semantic-->
+			<article id="html"> <!--html semantic-->
+				<h2>I'm Ready to Learn HTML</h2>
+				<p>This is my first web page.</p> <!-- paragraph -->
+				<img src="images/website-logo.png" alt="blue website logo" title="www website logo" width="215" height="225" />
+				<section id="html-example"> <!--html semantic-->
+					<h3>HTML5</h3>
+					<img src="images/html5.png" alt="html5 logo" title="I am learning HTML5" width="200" />
+					<figure>
+						<figcaption>An Example of HTML5 code</figcaption>
+						<p>
+							<code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+						</p>
+					</figure>
+				</section>
+				<section id="schudule">
+					<h3>My Daily Schedule</h3>
+					<!-- html has white-space collapsing, use &nbsp instead -->
+					<p>&nbsp;Let me tell you how:</p>
+					<!-- ordered list -->
+					<ol>
+						<li>...I learn more about web dev.</li>
+						<li>...I plan out my schedule.</li>
+						<li>...I use resources from <abbr title="Mozilla Developer Network"><!-- abbriviation tag -->
+							<a href="https://developer.mozilla.org/">MDN</a><!-- anchor tag -->
+							</abbr>.
+						</li>
+					</ol>
+					<aside>
+						<details> <!-- quite like a directory folder you can open/close -->
+							<summary>Guess the <mark>date</mark> I started writing this webpage</summary>
+							<p>Since 2022/07/21 at <time datetime="10:00">10 am</time>.</p>
+						</details>
+					</aside>
+					<br>
+					<!-- table -->
+					<table>
+						<caption>My Daily Schedule</caption> <!--html semantic-->
+						<thead>
+							<tr>
+								<th>&nbsp;</th>
+								<th scope="col">Time</th>
+								<th scope="col">Activity</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">Morning</th>
+								<td>
+									<time datetime="09:00">9am</time>-<time datetime="12:00">12pm</time>
+								</td>
+								<td>Write Code</td>
+							</tr>
+							<tr>
+								<th scope="row">Break</th>
+								<td>
+									<time datetime="12:00">12pm</time>-<time datetime="13:00">1pm</time>
+								</td>
+								<td>Eat Lunch</td>
+							</tr>
+							<tr>
+								<th scope="row">Afternooon</th>
+								<td>
+									<time datetime="13:00">1pm</time>-<time datetime="15:00">3pm</time>
+								</td>
+								<td>TOEFL</td>
+							</tr>
+							<tr>
+								<th scope="row">Evening</th>
+								<td rowspan="2">Other Time</td>
+								<td>Free Time</td>
+							</tr>
+							<tr>
+								<th scope="row">Night</th>
+								<td>Sleep</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="3">This is what I plan to do every day, 5 days a week.
+									Just do my graduation project, prepare for the Institute... and recharge!</td>
+							</tr>
+						</tfoot>
+					</table>
+				</section>
+			</article>
+			
+			<hr>
+			
+			<article id="summer-vacation">
+				<h3>I am Also Planning My Summer Vacation</h3>
+				<!-- unordered list -->
+				<ul>
+					<li>
+						<p>Planning ahead can help my future.</p>
+					</li>
+					<li>
+						<p>I'm about to become a <em>senior student</em> at <abbr title="Fu Jen Catholic University">FJCU.</abbr></p>						<figure>
+							<img src="images/fjcu-front_door.jpg" alt="pic of FJCU front door" title="Front door of FJCU" width="400" height="300" loading="lazy"/>
+							<figcaption>College students going to school from the front door at FJCU.</figcaption>
+						</figure>
+						Location:
+							<address>
+								No.510, Zhongzheng Rd., Xinzhuang Dist.,<br>
+								&nbsp;New Taipei City 242, Taiwan <abbr title="Republic of China">(R.O.C.)</abbr>
+							</address>
+					</li>
+				</ul>
+				<section>
+					<h3>Things would like to accomplish</h3>
+					<p>Prepare for TOEFL, IELTS.</p>
+					<p>Workout daily</p>
+					
+					<h3>Things to avoid</h3>
+					<p>Unhealthy diet. <strong>No way</strong>!</p>
+				</section>
+			</article>
+			<article id="contact">
+				<h2>Contact Me</h2>
+				<p>I'd like to know from you:</p>
+				<form action="https://httpbin.org/get" method="get"> <!-- input id should be unique, input name are for server level -->
+					<fieldset>
+						<legend>Personal Info</legend>
+						<p>
+							<label for="firstName">First Name:</label>
+							<input type="text" name="input_firstName" id="firstName" placeholder="Jane" autocomplete="on" required autofocus/>
+						</p>
+						<p>
+							<label for="lastName">First Name:</label>
+							<input type="text" name="input_lastName" id="lastName" placeholder="Jackson" autocomplete="on" required />
+						</p>	
+						<p>
+							<label for="password">Password:</label>
+							<input type="password" name="input_password" id="password" placeholder="your secret" required>
+						</p>
+						<p>
+							<label for="phone">Tel:</label>
+							<input type="tel" name="input_phone" id="phone" placeholder="09xxyyyzzz" pattern="[0-9]{10}" required />
+						</p>
+						<p>
+							<label for="decade">Favorite Decade:</label>
+							<input type="number" name="input_decade" id="decade" value="1980" min="1920" max="2020" step="10">
+						</p>
+						<p>
+							<label for="coffee">Favorite Coffee<strong>s</strong>:</label>
+							<select name="input_cofffee" id="coffee" multiple size="5">
+								<optgroup label="Coffees">
+									<option value="regular coffee">Regular Coffee</option>
+									<option value="iced coffee">Iced Coffee</option>
+								</optgroup>
+								<optgroup label="Espresso Drinks">
+									<option value="latte" selected>Latte</option>
+									<option value="cappuccino">Cappuccino</option>
+									<option value="cortado">Cortado</option>
+									<option value="americano">Americano</option>
+								</optgroup>
+								<option value="other">Other</option>
+							</select>
+						</p>
+						<!-- <p>
+							<label for="coffee_alt">Favorite Coffees:</label>
+							<input type="text" name="input_coffee_alt" id="coffee_alt" list="coffee-list">
+							<datalist id="coffee-list">
+								<option value="coffee">
+								<option value="latte">
+								<option value="espresso">
+								<option value="cortado">
+								<option value="americano">
+								<option value="other">
+							</datalist>
+						</p> -->
+					</fieldset>
+					<fieldset>
+						<legend>What is your favorite food?</legend>
+						<!-- input type 'radio' for single value, whereas 'checkbox' for multiple value -->
+						<p>
+							<input type="radio" name="input_food" id="tacos" value="tacos">
+							<label for="tacos">Tacos</label>
+						</p>
+						<p>
+							<input type="radio" name="input_food" id="pizza" value="pizza">
+							<label for="pizza">Pizza</label>
+						</p>
+						<p>
+							<input type="radio" name="input_food" id="other" value="other">
+							<label for="other">Other</label>
+						</p>
+					</fieldset>
+					<fieldset>
+						<legend>Do you have pets?</legend>
+						<p>
+							<input type="checkbox" name="input_pets" id="dog" value="dog">
+							<label for="dog">Dog</label>
+						</p>
+						<p>
+							<input type="checkbox" name="input_pets" id="cat" value="cat">
+							<label for="cat">Cat</label>
+						</p>
+						<p>
+							<input type="checkbox" name="input_pets" id="fish" value="fish">
+							<label for="fish">Fish</label>
+						</p>
+						<p>
+							<input type="checkbox" name="input_pets" id="pets_other" value="other">
+							<label for="pets_other">Other</label>
+						</p>
+					</fieldset>
+					<br>
+					<fieldset>
+						<legend>Send Me A Note</legend>
+						<label for="message">Your Message:</label>
+						<br>
+						<textarea name="input_message" id="message" cols="30" rows="10" placeholder="Type your message here..."></textarea>
+					</fieldset>
+					<br>
+					<!-- <input type="submit" value=""> -->
+					<!-- get method send value within url, post doesn't (used for sensitive request) -->
+					<button type="submit">Submit:get</button>
+					<button type="submit" formaction="https://httpbin.org/post" formmethod="post">Submit:post</button>
+					<button type="reset">Reset</button>
+				</form>
+			</article>
+		</main>
+		
+		<hr>
+
+		<footer>
+			About me &lt;&lt;&lt; &copy; <a href="about.html">Victor Wang</a> &gt;&gt;&gt;<br>
+			<!-- discription list -->
+			<dl>
+				<!-- discription term-->
+				<dt>email:<dt>
+				<!-- discription detail-->
+				<dd>
+					<address>VKWang@gmail.com</address>
+				</dd>
+				<dd>
+					<address>408261278@mail.fju.edu.tw</address>
+				</dd>
+			</dl>
+			<a href="#">Back to Top</a>
+		</footer>
+	</body>
+	
 </html>
+<!-- html closing tag -->
