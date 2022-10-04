@@ -20,15 +20,16 @@ a:hover {
 }
 
 table, tr, th, td, caption {
-	border: 1px double brown;
+	border: 5px double #683108;
 	font-family: 'Courier New', Courier, monospace;
 	padding: 0.5rem;
 }
 
-#html_code_example {
-	blackground-color: black;
-	color: red;
+.html_code_example {
+	blackground-color: white;
+	color: blue;
 }
-#html_code_example p {
+.html_code_example p {
+	background-color: black;
 	color: green;
 }
