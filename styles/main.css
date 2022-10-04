@@ -4,7 +4,7 @@ html{
 
 body {
 	background-color: #333;
-	color: whitesmoke;
+	color: white;
 } 
 
 a {
@@ -20,8 +20,7 @@ a:hover {
 }
 
 table, tr, th, td, caption {
-	border: 1px solid lightgray;
+	border: 1px double brown;
 	font-family: 'Courier New', Courier, monospace;
-	border-collapse: collapse;
 	padding: 0.5rem;
 }
