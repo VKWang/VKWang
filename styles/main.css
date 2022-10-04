@@ -26,7 +26,8 @@ table, tr, th, td, caption {
 }
 
 .html_code_example {
-	blackground-color: white;
+	border: 10px ridge grey;
+	background-color: white;
 	color: blue;
 }
 .html_code_example p {
